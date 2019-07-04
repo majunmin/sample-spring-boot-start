@@ -44,23 +44,40 @@
 
   </dependencies>
 
-  <!--将源码安装到仓库-->
+  <!--执行 mvn deploy 安装到 公司私服-->
+  <distributionManagement>
+    <repository>
+      <id>releases</id>    <!--对应 settings.xml 下 servers 下的 id-->
+      <name>release</name>
+      <url>http://alima1/repository/maven-snapshots/</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>snapshot</name>
+      <url>http://alima1/repository/maven-releases/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+
   <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>3.1.0</version>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>jar-no-fork</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
+    <pluginManagement>
+      <plugins>
+        <!--将源码安装到仓库-->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>3.1.0</version>
+          <executions>
+            <execution>
+              <id>attach-sources</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>jar-no-fork</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 </project>
