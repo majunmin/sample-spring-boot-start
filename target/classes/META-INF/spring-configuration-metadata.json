@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "com.service",
+      "type": "com.majm.config.ExampleProperties",
+      "sourceType": "com.majm.config.ExampleProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "com.service.desc",
+      "type": "java.lang.String",
+      "sourceType": "com.majm.config.ExampleProperties"
+    },
+    {
+      "name": "com.service.name",
+      "type": "java.lang.String",
+      "sourceType": "com.majm.config.ExampleProperties"
+    }
+  ],
+  "hints": []
+}
