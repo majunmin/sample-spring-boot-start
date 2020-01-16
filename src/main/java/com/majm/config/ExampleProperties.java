@@ -14,11 +14,15 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  */
 @Getter
 @Setter
-@ConfigurationProperties("com.service")
+@ConfigurationProperties(ExampleProperties.EXAMPLE_PREFIX)
 public class ExampleProperties {
+
+    public static final String EXAMPLE_PREFIX = "com.service";
 
     private String name;
 
     private String desc;
+
+    private Integer age;
 
 }

@@ -1,0 +1,33 @@
+{
+  "groups": [
+    {
+      "name": "com.service",
+      "type": "com.majm.config.ExampleProperties",
+      "sourceType": "vip.hoody.config.InfoConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "com.service.name",
+      "type": "java.lang.String",
+      "description": "user name",
+      "sourceType": "com.majm.config.ExampleProperties",
+      "defaultValue": "unknown"
+    },
+    {
+      "name": "com.service.age",
+      "type": "java.lang.Integer",
+      "description": "user age",
+      "sourceType": "com.majm.config.ExampleProperties",
+      "defaultValue": 18
+    },
+    {
+      "name": "com.service.desc",
+      "type": "java.lang.String",
+      "description": "user deesc",
+      "sourceType": "com.majm.config.ExampleProperties",
+      "defaultValue": ""
+    }
+  ],
+  "hints": []
+}

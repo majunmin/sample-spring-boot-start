@@ -1,6 +1,5 @@
 package com.majm.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -27,7 +26,6 @@ public class ExampleAutoConfig {
 
     private final ExampleProperties exampleProperties;
 
-    @Autowired
     public ExampleAutoConfig(ExampleProperties exampleProperties) {
         this.exampleProperties = exampleProperties;
     }
